@@ -9,9 +9,6 @@ a {
   text-decoration: none;
   color: inherit;
 }
-body {
-  background: lightgray;
-}
 .center {
   width: 100%;
 }
@@ -176,6 +173,9 @@ body {
 .main-info-block__content_work {
   flex-direction: column;
 }
+.main-info-block_projects {
+  margin-bottom: 0px;
+}
 .education-block__header,
 .work-block__header,
 .projects-block__header {
@@ -186,9 +186,9 @@ body {
 .education-block__label,
 .work-block__label,
 .projects-block__label {
-  margin-right: 20px;
   font-weight: 700;
   font-size: 1.1em;
+  padding-right: 20px;
 }
 .education-block__date,
 .work-block__date,
@@ -206,7 +206,7 @@ body {
   margin-top: 5px;
 }
 .education-block + .education-block {
-  margin-left: 10%;
+  padding-left: 10%;
 }
 .work-block {
   margin-bottom: 15px;
@@ -218,4 +218,33 @@ body {
 }
 /*MAIN*/
 /*MEDIA*/
+@media (max-width: 1050px) {
+  .main {
+    flex-direction: column;
+  }
+  .main__sidebar {
+    width: 100%;
+  }
+  .main__body {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .main-info-block__content_education {
+    flex-direction: column;
+  }
+  .main-info-block .education-block + .education-block {
+    padding-left: 0;
+    margin-top: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    padding: 20px 20px;
+  }
+  .main__sidebar,
+  .main__body {
+    padding: 20px 20px;
+  }
+}
 /*MEDIA*/
