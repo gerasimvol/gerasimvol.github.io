@@ -3,13 +3,29 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
-      <title>CV Gerasimenko V.</title>
+      <title>Gerasimenko Vladimir</title>
+      <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>
+        .preloader_wrapper {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            z-index: 100500;
+        }
+        </style>
       <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
       
    </head>
    <body>
+       <div class="preloader_wrapper">
+            <div class="preloader"></div>
+        </div>
       <div class='site_wrapper center'>
           <header class='header'>
               <section class='header__content'>
@@ -155,5 +171,11 @@
               </section>
           </section>  
       </div>
+        <script>           
+             $(window).on('load', function () {
+                var $preloader = $('.preloader_wrapper');
+                $preloader.delay(350).fadeOut('slow');
+            });
+        </script>
    </body>
 </html>
