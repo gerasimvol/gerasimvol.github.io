@@ -214,9 +214,13 @@
         <script>           
               $(window).on('load', function () {
                 var $preloader = $('.preloader_wrapper'),
-                    $spinner   = $preloader.find('.preloader');
+                    $spinner   = $preloader.find('.preloader'),
+                    $header = $('.header').addClass('slide-in-left'),
+                    $sidebar = $('.main__sidebar').addClass('slide-in-top'),
+                    $mainBody = $('.main__body').addClass('slide-in-right');
                 $spinner.fadeOut();
                 $preloader.delay(350).fadeOut('slow');
+
             });
         </script>
    </body>
