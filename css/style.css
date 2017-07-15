@@ -46,9 +46,17 @@ a {
     opacity: 1;
   }
 }
+.slide-in-right {
+  animation: slide-in-right 1.3s forwards;
+}
+.slide-in-left {
+  animation: slide-in-left 1.3s forwards;
+}
+.slide-in-top {
+  animation: slide-in-top 1.3s forwards;
+}
 /*HEADER*/
 .header {
-  animation: slide-in-left 1.3s forwards;
   padding: 40px 40px;
   color: #ffffff;
   background: linear-gradient(90deg, #000000 0%, rgba(255, 255, 255, 0.05) 65%), url('../img/header.jpg') no-repeat, #000000;
@@ -103,14 +111,12 @@ a {
   padding: 40px 40px;
   background: #212121;
   color: #ffffff;
-  animation: slide-in-top 1.3s forwards;
 }
 .main__body {
   width: 70%;
   padding: 40px 40px;
   background: #ffffff;
   color: #242424;
-  animation: slide-in-right 1.3s forwards;
 }
 .sidebar__about,
 .sidebar__skills {
