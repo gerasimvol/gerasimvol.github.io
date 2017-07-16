@@ -7,60 +7,69 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
       <style>
-          .preloader_wrapper {
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  z-index: 100500;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+            .preloader_wrapper {
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background: #000;
+                z-index: 100500;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
 
-.preloader {
-  position: relative;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
+            .preloader {
+                position: relative;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
 
-.preloader::before {
-  content: '';
-  position: absolute;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 4px solid #951b25;
-  border-left-color: transparent;
-  border-right-color: transparent;
-  animation: spin 1s linear infinite; 
-}
+            .preloader::before {
+                content: '';
+                position: absolute;
+                box-sizing: border-box;
+                top: 0;
+                left: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 4px solid #951b25;
+                border-left-color: transparent;
+                border-right-color: transparent;
+                animation: spin 1s linear infinite; 
+            }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg) scale(1);
+            .fadeOut {
+                transition: opacity 500ms;
+                opacity: 0;
+            }
 
-  }
+            .fadeOut_slow {
+                transition: opacity 500ms 350ms;
+                opacity: 0;
+            }
 
-  50% {
-    transform: rotate(45deg) scale(1.2);
-  }
+            @keyframes spin {
+            0% {
+                transform: rotate(0deg) scale(1);
 
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-        </style>
+            }
+
+            50% {
+                transform: rotate(45deg) scale(1.2);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+            }
+      </style>
       <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-      
    </head>
    <body>
       <div class="preloader_wrapper">
@@ -211,17 +220,22 @@
               </section>
           </section>  
       </div>
-        <script>           
-                    $(window).on('load', function () {
-                    var $preloader = $('.preloader_wrapper'),
-                        $spinner   = $preloader.find('.preloader'),
-                        $header = $('.header').addClass('slide-in-left'),
-                        $sidebar = $('.main__sidebar').addClass('slide-in-top'),
-                        $mainBody = $('.main__body').addClass('slide-in-right');
-                    $spinner.fadeOut();
-                    $preloader.delay(350).fadeOut('slow');
+      <script>           
+        document.addEventListener('DOMContentLoaded', function() {
+            var preloader = document.querySelector('.preloader_wrapper'),
+                spinner = document.querySelector('.preloader'),
+                header = document.querySelector('.header'),             
+                sidebar = document.querySelector('.main__sidebar'),         
+                mainBody = document.querySelector('.main__body'); 
+                
+                header.className += ' slide-in-left';
+                sidebar.className += ' slide-in-top';
+                mainBody.className += ' slide-in-right';
+                spinner.className += ' fadeOut';
+                preloader.className += ' fadeOut_slow';
+                
 
-                });
-            </script>
+        }, false);
+      </script>
    </body>
 </html>
