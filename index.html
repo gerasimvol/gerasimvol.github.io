@@ -4,7 +4,6 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
       <title>Vladimir Gerasimenko</title>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
       <style>
             .preloader_wrapper {
@@ -43,13 +42,17 @@
             }
 
             .fadeOut {
-                transition: opacity 500ms;
+                transition: opacity 350ms;
                 opacity: 0;
             }
 
             .fadeOut_slow {
-                transition: opacity 500ms 350ms;
+                transition: opacity 350ms 350ms;
                 opacity: 0;
+            }
+
+            .hide {
+                display: none;
             }
 
             @keyframes spin {
@@ -227,12 +230,19 @@
                 header = document.querySelector('.header'),             
                 sidebar = document.querySelector('.main__sidebar'),         
                 mainBody = document.querySelector('.main__body'); 
+
+                preloader.className += ' fadeOut';
+                spinner.className += ' fadeOut_slow';
+
+                setTimeout(function() {
+                    preloader.className += ' hide';
+                    spinner.className += ' hide';
+                }, 350);
                 
                 header.className += ' slide-in-left';
                 sidebar.className += ' slide-in-top';
                 mainBody.className += ' slide-in-right';
-                spinner.className += ' fadeOut';
-                preloader.className += ' fadeOut_slow';
+                
                 
 
         }, false);
