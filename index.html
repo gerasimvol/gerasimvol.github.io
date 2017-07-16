@@ -51,10 +51,6 @@
                 opacity: 0;
             }
 
-            .hide {
-                display: none;
-            }
-
             @keyframes spin {
             0% {
                 transform: rotate(0deg) scale(1);
@@ -223,8 +219,8 @@
               </section>
           </section>  
       </div>
-      <script>           
-        document.addEventListener('DOMContentLoaded', function() {
+      <script>  
+        window.onload = function(){
             var preloader = document.querySelector('.preloader_wrapper'),
                 spinner = document.querySelector('.preloader'),
                 header = document.querySelector('.header'),             
@@ -235,17 +231,14 @@
                 spinner.className += ' fadeOut_slow';
 
                 setTimeout(function() {
-                    preloader.className += ' hide';
-                    spinner.className += ' hide';
+                    preloader.style.display = 'none';
+                    spinner.style.display = 'none';
                 }, 350);
                 
                 header.className += ' slide-in-left';
                 sidebar.className += ' slide-in-top';
                 mainBody.className += ' slide-in-right';
-                
-                
-
-        }, false);
+        };        
       </script>
    </body>
 </html>
