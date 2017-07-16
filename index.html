@@ -42,12 +42,12 @@
             }
 
             .fadeOut {
-                transition: opacity 350ms;
+                transition: opacity 500ms;
                 opacity: 0;
             }
 
             .fadeOut_slow {
-                transition: opacity 350ms 350ms;
+                transition: opacity 500ms 400ms;
                 opacity: 0;
             }
 
@@ -233,7 +233,7 @@
                 setTimeout(function() {
                     preloader.style.display = 'none';
                     spinner.style.display = 'none';
-                }, 350);
+                }, 960);
                 
                 header.className += ' slide-in-left';
                 sidebar.className += ' slide-in-top';
