@@ -195,6 +195,49 @@ a {
   display: -ms-flexbox;
   display: flex;
   flex: 1;
+  position: relative;
+}
+
+.print-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #951b25;
+  background: transparent;
+  color: #951b25;
+  font-size: 1.5em;
+  cursor: pointer;
+  outline: none;
+  animation: shake 1.7s linear infinite;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .print-btn {
+    display: none;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: rotate(-7deg) scale(0.99);
+  }
+  
+  20%, 80% {
+    transform: rotate(7deg) scale(1.01);
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(-5deg) scale(0.99);
+  }
+
+  40%, 60% {
+    transform: rotate(5deg) scale(1.01);
+  }
 }
 
 .main__sidebar {
@@ -215,6 +258,17 @@ a {
 
 .references {
   margin-top: auto;
+}
+
+.print-button {
+  background: none;
+  color: #eee9e9;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9em;
+  margin-top: 20px;
+  cursor: pointer;
+  outline: none;
 }
 
 .sidebar__about,
@@ -327,7 +381,8 @@ a {
 .links__link_cv {
   font-size: 1.3em;
   line-height: 1.3em;
-  vertical-align: top
+  vertical-align: top;
+  cursor: pointer;
 }
 
 .links__link:hover {
