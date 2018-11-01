@@ -524,3 +524,9 @@ a {
     padding: 20px 20px
   }
 }
+
+@media print {
+  *, *::before, *::after {
+    color: black !important;
+  }
+}
