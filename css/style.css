@@ -114,6 +114,17 @@ a {
   animation: slide-in-top 1.2s ease forwards
 }
 
+.site_wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.link_text:hover {
+  transition: color 0.3s;
+  color: #951b25;
+}
+
 .header {
   padding: 40px 40px;
   color: #ffffff;
@@ -182,14 +193,17 @@ a {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  flex: 1;
 }
 
 .main__sidebar {
+  display: flex;
   width: 30%;
+  flex-direction: column;
   padding: 40px 40px;
+  color: #ffffff;
   background: #212121;
-  color: #ffffff
 }
 
 .main__body {
@@ -197,6 +211,10 @@ a {
   padding: 40px 40px;
   background: #ffffff;
   color: #242424
+}
+
+.references {
+  margin-top: auto;
 }
 
 .sidebar__about,
@@ -277,31 +295,23 @@ a {
 }
 
 .skill_htmlcss {
-  width: 85%
+  width: 90%
 }
 
 .skill_javascript {
-  width: 70%
+  width: 82%
 }
 
 .skill_vue {
-  width: 70%
+  width: 85%
 }
 
 .skill_angular {
-  width: 55%
-}
-
-.skill_node {
   width: 40%
 }
 
-.skill_sharp {
-  width: 35%
-}
-
-.skill_photoshop {
-  width: 55%
+.skill_node {
+  width: 45%
 }
 
 .links__link {
@@ -329,15 +339,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between
 }
 
 .main-info-block {
