@@ -576,8 +576,25 @@ a {
   }
 }
 
+.links_print {
+  display: none;
+}
+
 @media print {
   *, *::before, *::after {
     color: black !important;
+    padding: 0;
+  }
+
+  .header__logo {
+    display: none;
+  }
+
+  .header__personal-info {
+    margin-bottom: 15px;
+  }
+
+  .links_print {
+    display: block;
   }
 }
