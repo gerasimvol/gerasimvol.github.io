@@ -30,6 +30,9 @@ main {
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   padding: 60px 40px;
   color: #ffffff;
@@ -67,6 +70,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: 1250px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -125,6 +129,10 @@ main {
 }
 
 @media (max-width:768px) {
+  main {
+    min-height: auto;
+  }
+
   .header {
     background: none;
     padding: 20px 4.5vw;
