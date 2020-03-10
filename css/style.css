@@ -31,7 +31,7 @@ main {
 
 .header {
   position: relative;
-  padding: 40px 40px;
+  padding: 60px 40px;
   color: #ffffff;
   background: linear-gradient(90deg, #000000 0%, rgba(255, 255, 255, 0.05) 65%), url('../img/header.jpg') no-repeat, #000000;
   background-size: cover;
