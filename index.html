@@ -5,276 +5,62 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0"/>
       <title>Vladimir Gerasimenko</title>
       <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-      <style>
-            .preloader_wrapper {
-              position: fixed;
-              left: 0;
-              top: 0;
-              right: 0;
-              bottom: 0;
-              background: #000;
-              z-index: 100500;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-
-            .preloader {
-              position: relative;
-              border-radius: 50%;
-              width: 50px;
-              height: 50px;
-            }
-
-            .preloader::before {
-              content: '';
-              position: absolute;
-              box-sizing: border-box;
-              top: 0;
-              left: 0;
-              width: 50px;
-              height: 50px;
-              border-radius: 50%;
-              border: 4px solid #951b25;
-              border-left-color: transparent;
-              border-right-color: transparent;
-              animation: spin 1s linear infinite;
-            }
-
-            .fadeOut {
-              transition: opacity 500ms;
-              opacity: 0;
-            }
-
-            .fadeOut_slow {
-              transition: opacity 500ms 400ms;
-              opacity: 0;
-            }
-
-            @keyframes spin {
-              0% {
-                transform: rotate(0deg) scale(1);
-              }
-
-              50% {
-                transform: rotate(45deg) scale(1.2);
-              }
-
-              100% {
-                transform: rotate(360deg) scale(1);
-              }
-            }
-      </style>
       <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
    </head>
    <body>
-      <div class="preloader_wrapper">
-        <div class="preloader"></div>
-      </div>
-      <div class='site_wrapper center'>
+      <main class='site_wrapper'>
         <header class='header'>
-          <section class='header__content'>
+          <div class='header__content'>
             <div class='header__logo'></div>
+
             <div class='header__personal-info'>
                 <h1 class='header__position'>Frontend developer</h1>
                 <h1 class='header__name'>Vladimir Gerasimenko</h1>
             </div>
+
             <div class='header__contacts'>
-              <div class='contacts__phone'>
-                  <h2 class='contacts__label'>Phone</h2>
-                  <p class='contacts__value'>+38050-242-99-45</p>
+              <div class='header__contact'>
+                  <h2 class='contact__label'>Phone</h2>
+                  <a class='contact__value' href='tel:+38050-242-99-45' target='_blank'>+38050-242-99-45</a>
               </div>
-              <div class='contacts__email'>
-                  <h2 class='contacts__label'>Email</h2>
-                  <p class='contacts__value'><a href='mailto:vol.gerasimenko@gmail.com' target='_blank'>vol.gerasimenko@gmail.com</a></p>
+              <div class='header__contact'>
+                  <h2 class='contact__label'>Email</h2>
+                  <a class='contact__value' href='mailto:vol.gerasimenko@gmail.com' target='_blank'>vol.gerasimenko@gmail.com</a>
               </div>
-              <div class='contacts__address'>
-                  <h2 class='contacts__label'>Address</h2>
-                  <p class='contacts__value'>Ukraine, Kiev</p>
+              <div class='header__contact'>
+                  <h2 class='contact__label'>Address</h2>
+                  <p class='contact__value'>Ukraine, Kiev</p>
+              </div>
+              <div class='header__contact'>
+                  <h2 class='contact__label'>References</h2>
+                  <div>
+                    <a
+                      class='link-icon'
+                      href='https://github.com/gerasimvol' target='_blank'
+                    ><i class="fa fa-github" aria-hidden="true"></i></a>
+      
+                    <a class='link-icon'
+                      href='https://www.linkedin.com/in/gerasimenkovladimir/' target='_blank'
+                    ><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+      
+                    <a class='link-icon'
+                      href='https://codepen.io/gerasim_vol/pens/public/' target='_blank'
+                    ><i class="fa fa-codepen" aria-hidden="true"></i></a>
+      
+                    <a class='link-icon'
+                      href='https://www.instagram.com/gerasim_vol/' target='_blank'
+                    ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      
+                    <a class='link-icon'
+                      href='https://www.twitter.com/gerasim_vol' target='_blank'
+                    ><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </div>
               </div>
             </div>
-          </section>
+          </div>
         </header>
-        <main class='main'>
-          <aside class='main__sidebar'>
-            <div class='sidebar__about'>
-              <h2 class='sidebar__label'>About myself</h2>
-              <ul class='about__text'>
-                <li>Interested in communicating with the team and clients</li>
-                <li>Understanding of industry trends</li>
-                <li>Skilled in multitasking and working on several projects simultaneously</li>
-                <li>Ability to gain new skills and troubleshoot problems</li>
-                <li>Well-organized to meet deadlines</li>
-                <li>Communication, punctuality, responsibility, teamwork, good sense of humor</li>
-              </ul>
-            </div>
-            <div class='sidebar__skills'>
-              <h2 class='sidebar__label'>Skills</h2>
-              <div class='skills__content'>
-                <div class='skills'>
-                  <div class='skill'>
-                    <div class='skill__name'>html & css(scss)</div>
-                    <div class='skill__bar'><div class='skill__bar_progress skill_htmlcss'></div></div>
-                  </div>
-                  <div class='skill'>
-                    <div class='skill__name'>javascript</div>
-                    <div class='skill__bar'><div class='skill__bar_progress skill_javascript'></div></div>
-                  </div>
-                  <div class='skill'>
-                    <div class='skill__name'>VueJS & NuxtJS</div>
-                    <div class='skill__bar'><div class='skill__bar_progress skill_vue'></div></div>
-                  </div>
-                  <div class='skill'>
-                    <div class='skill__name'>SVG & canvas</div>
-                    <div class='skill__bar'><div class='skill__bar_progress skill_svg'></div></div>
-                  </div>
-                    </div>
-                    <div class='skills__others'>
-                      <p class='skills__other'>Web standards, accessibility, responsive and cross-browser markup</p>
-                      <p class='skills__other'>Git, Webpack, PWA</p>
-                      <p class='skills__other'>Linting, unit & e2e tests</p>
-                    </div>
-                </div>
-              </div>
-              <div class='references'>
-                <h2 class='sidebar__label'>References</h2>
-                <div class='links'>
-                  <a
-                    class='links__link links__link_github'
-                    href='https://github.com/gerasimvol' target='_blank'
-                  ><i class="fa fa-github" aria-hidden="true"></i></a>
-
-                  <a class='links__link links__link_linkedin'
-                    href='https://www.linkedin.com/in/gerasimenkovladimir/' target='_blank'
-                  ><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-
-                  <a class='links__link links__link_codepen'
-                    href='https://codepen.io/gerasim_vol/pens/public/' target='_blank'
-                  ><i class="fa fa-codepen" aria-hidden="true"></i></a>
-
-                  <a class='links__link links__link_instagram'
-                    href='https://www.instagram.com/gerasim_vol/' target='_blank'
-                  ><i class="fa fa-instagram" aria-hidden="true"></i></a>
-
-                  <a class='links__link links__link_twitter'
-                    href='https://www.twitter.com/gerasim_vol' target='_blank'
-                  ><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </div>
-                <div class='links_print'>
-                  <div>https://github.com/gerasimvol</div>
-                  <div>https://www.linkedin.com/in/gerasimenkovladimir</div>
-                  <div>https://codepen.io/gerasim_vol/pens/public</div>
-                  <div>https://www.instagram.com/gerasim_vol</div>
-                  <div>https://www.twitter.com/gerasim_vol</div>
-                </div>
-              </div>
-          </aside>
-          <section class='main__body'>
-            <div class='main-info-block'>
-              <h1 class='main-info-block__label'>Education</h1>
-              <div class='main-info-block__content main-info-block__content_education'>
-                <div class='education-block'>
-                  <div class='education-block__header'>
-                    <h2 class='education-block__label'>School</h2>
-                    <h3 class='education-block__date'>2003 - 2014</h3>
-                  </div>
-                  <p class='education-block__description'>Specialized School №1 with profound study of foreign languages</p>
-                </div>
-                <div class='education-block'>
-                  <div class='education-block__header'>
-                    <h2 class='education-block__label'>Computer Engineering</h2>
-                    <h3 class='education-block__date'>2014 - 2018</h3>
-                  </div>
-                  <p class='education-block__description'>
-                    Taras Shevchenko National University of Kyiv. Second place at faculty in ACM ICPC
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class='main-info-block'>
-              <h1 class='main-info-block__label'>Work Experience</h1>
-              <div class='main-info-block__content main-info-block__content_work'>
-                <div class='work-block'>
-                  <div class='work-block__header'>
-                    <h2 class='work-block__label'><a href='https://vintage.com.ua/' target='_blank'>Vintage Web Production</a></h2>
-                    <h3 class='work-block__date'>2018 - Present</h3>
-                  </div>
-                  <h3 class='work-block__position'>Frontend developer</h3>
-                  <p class='work-block__description'>Vue/Nuxt, GSAP, canvas, SVG, animations</p>
-                </div>
-                <div class='work-block'>
-                  <div class='work-block__header'>
-                    <h2 class='work-block__label'><a href='https://www.daxx.com/' target='_blank'>DAXX</a></h2>
-                    <h3 class='work-block__date'>2018</h3>
-                  </div>
-                  <h3 class='work-block__position'>JS developer</h3>
-                  <p class='work-block__description'>Vue/Nuxt, vue-test-utils, AVA, Nightwatch, webpack, performance</p>
-                </div>
-
-                <div class='work-block'>
-                  <div class='work-block__header'>
-                    <h2 class='work-block__label'><a href='http://adraba.io/' target='_blank'>Adraba</a></h2>
-                    <h3 class='work-block__date'>2017 - 2018</h3>
-                  </div>
-                  <h3 class='work-block__position'>Frontend developer</h3>
-                  <p class='work-block__description'>
-                    My responsibilities were developing applications (UI and logic), leading team, making code review.
-                  </p>
-                </div>
-
-                <div class='work-block'>
-                  <div class='work-block__header'>
-                    <h2 class='work-block__label'>Freelance</h2>
-                    <h3 class='work-block__date'>2016 - 2017</h3>
-                  </div>
-                  <h3 class='work-block__position'>Frontend developer</h3>
-                  <p class='work-block__description'>
-                    Worked with different small tasks, adding new functionality and working on my own project - <a class="link_text" href='https://fresh-accounts.apphb.com' target='_blank'>Achunter.com</a>
-                  </p>
-                </div>
-
-                <div class='work-block'>
-                  <div class='work-block__header'>
-                    <h2 class='work-block__label'><a href='https://www.radacode.com/' target='_blank'>Radacode</a></h2>
-                    <h3 class='work-block__date'>2015 - 2016</h3>
-                  </div>
-                  <h3 class='work-block__position'>Web developer</h3>
-                  <p class='work-block__description'>
-                    I worked with Linux, haproxy and ssl.
-                    Builded nodeJS + angularJS single page apps to create ssl certificates and control your haproxy server.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </main>
-        <button class="print-btn" onclick="window.print()" title="Print CV">
-          <i class="fa fa-print" aria-hidden="true"></i>
-        </button>
-      </div>
-      <script>
-        window.onload = function(){
-          const preloader = document.querySelector('.preloader_wrapper'),
-            spinner = document.querySelector('.preloader'),
-            header = document.querySelector('.header'),
-            sidebar = document.querySelector('.main__sidebar'),
-            mainBody = document.querySelector('.main__body')
-
-            preloader.className += ' fadeOut_slow'
-            spinner.className += ' fadeOut'
-
-            setTimeout(function() {
-                preloader.style.display = 'none'
-                spinner.style.display = 'none'
-            }, 960);
-            
-            header.className += ' slide-in-left'
-            sidebar.className += ' slide-in-top'
-            mainBody.className += ' slide-in-right'
-        };
-      </script>
+      </main>
    </body>
 </html>
