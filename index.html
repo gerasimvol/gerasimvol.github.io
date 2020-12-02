@@ -14,15 +14,15 @@
       <meta name="msapplication-config" content="/favicon/browserconfig.xml">
       <meta name="theme-color" content="#ffffff">
 
-      <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="css/style.css">
       <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
    </head>
    <body>
       <main class='site_wrapper'>
-        <header class='header'>
-          <div class='header__content'>
-            <div class='header__logo logo'>
+        <header class='content'>
+          <div class='content__inner'>
+            <div class='content__logo logo'>
               <svg viewBox="0 0 392.186 392.186">
                 <clipPath id="logo__mask">
                   <path d="M368.62 17.951H23.568C10.57 17.951 0 28.524 0 41.52v309.146c0 12.996 10.57 23.568 23.568 23.568h345.053c12.994 0 23.564-10.572 23.564-23.568V41.52c.003-12.995-10.571-23.569-23.565-23.569zm-71.06 39.577a8.703 8.703 0 0 1 8.701-8.703h8.703a8.7 8.7 0 0 1 8.701 8.703v9.863a8.702 8.702 0 0 1-8.701 8.702h-8.703a8.702 8.702 0 0 1-8.701-8.702v-9.863zm-40.467 0a8.704 8.704 0 0 1 8.703-8.703h8.701a8.704 8.704 0 0 1 8.703 8.703v9.863a8.703 8.703 0 0 1-8.703 8.702h-8.701a8.703 8.703 0 0 1-8.703-8.702v-9.863zm106.81 288.423H28.282V102.235h335.621v243.716zm.229-278.56a8.702 8.702 0 0 1-8.701 8.702h-8.703a8.7 8.7 0 0 1-8.702-8.702v-9.863a8.703 8.703 0 0 1 8.702-8.703h8.703a8.701 8.701 0 0 1 8.701 8.703v9.863z"/>
@@ -44,21 +44,21 @@
               </svg>
             </div>
 
-            <div class='header__personal-info'>
-                <h1 class='header__position'>Software engineer</h1>
-                <h1 class='header__name'>Vladimir Gerasimenko</h1>
+            <div class='content__personal-info'>
+                <h1 class='content__position'>Software engineer</h1>
+                <h1 class='content__name'>Vladimir Gerasimenko</h1>
             </div>
 
-            <div class='header__contacts'>
-              <div class='header__contact'>
+            <div class='content__contacts'>
+              <div class='content__contact'>
                   <h2 class='contact__label'>Location</h2>
                   <p class='contact__value'>Ukraine, Kyiv</p>
               </div>
-              <div class='header__contact'>
+              <div class='content__contact'>
                   <h2 class='contact__label'>Email</h2>
                   <a class='contact__value' href='mailto:vol.gerasimenko@gmail.com' target='_blank'>vol.gerasimenko@gmail.com</a>
               </div>
-              <div class='header__contact'>
+              <div class='content__contact'>
                   <h2 class='contact__label'>References</h2>
                   <div>
                     <a
@@ -98,7 +98,9 @@
       </main>
 
       <div class="overlay"></div>
+      <div class="mouse-effect"></div>
 
-      <script src="/script.js"></script>
+      <script src="js/set-content-height.js"></script>
+      <script type="module" src="js/mouse-effect.js"></script>
    </body>
 </html>
