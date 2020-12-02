@@ -15,23 +15,28 @@ class Dot {
     this.vx = Math.random() * 2
     this.vy = Math.random() * 2
     this.radius = Math.random() * 2 + 2
-    this.color = `rgba(200, 0, 0, ${Math.random() + 0.5})`
+    this.opacity = Math.random() + 0.5
+  }
+
+  getColor () {
+    return `rgba(200, 0, 0, ${this.opacity})`
   }
 
   fall() {
     this.x += this.vx
     this.y += this.vy
     this.vy += Dot.gravity
+    this.opacity-=0.01
   }
 }
 
 function animate() {
   ctx.clearRect(0, 0, cW, cH)
   dots.forEach(dot => {
-    ctx.fillStyle = dot.color
+    ctx.fillStyle = dot.getColor() 
     ctx.fillRect(dot.x, dot.y, dot.radius, dot.radius)
 
-    if (dot.x < cW && dot.y < cH) {
+    if (dot.x < cW && dot.y < cH && dot.opacity > 0) {
       dot.fall()
     } else {
       dots.splice(dots.indexOf(dot), 1)
