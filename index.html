@@ -14,7 +14,7 @@
       <meta name="msapplication-config" content="/favicon/browserconfig.xml">
       <meta name="theme-color" content="#ffffff">
 
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="/style.css">
       <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
    </head>
@@ -97,14 +97,8 @@
         </header>
       </main>
 
-      <script>
-        function setHeight () {
-            document.querySelector('.header').style.height = window.innerWidth <= 768
-              ? window.innerHeight + 'px'
-              : 'auto'
-        }
-        setHeight()
-        window.addEventListener('resize', setHeight)
-      </script>
+      <div class="overlay"></div>
+
+      <script src="/script.js"></script>
    </body>
 </html>

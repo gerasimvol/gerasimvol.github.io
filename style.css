@@ -1,3 +1,7 @@
+:root {
+  --z-index-overlay: 2;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -48,12 +52,10 @@ main {
   padding: 60px 40px;
   color: #ffffff;
   position: relative;
-  z-index: 100000;
 }
 
 .header__content {
   position: relative;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   max-width: 1250px;
@@ -179,6 +181,24 @@ svg {
 
 .link-icon_tg {
   transform: scale(0.8);
+}
+
+.overlay {
+  position: fixed;
+  z-index: var(--z-index-overlay);
+  background: black;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: fadeOut 0.5s 0.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 @media (max-width:768px) {
