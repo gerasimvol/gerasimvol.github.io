@@ -196,6 +196,8 @@ svg {
   bottom: 0;
   right: 0;
   animation: fadeOut 1s 0.5s forwards;
+  pointer-events: none;
+
 }
 
 .mouse-effect {
@@ -210,7 +212,6 @@ svg {
 @keyframes fadeOut {
   to {
     opacity: 0;
-    pointer-events: none;
   }
 }
 
