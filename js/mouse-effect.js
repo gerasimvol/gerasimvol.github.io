@@ -19,7 +19,7 @@ class Dot {
   }
 
   getColor () {
-    return `rgba(200, 0, 0, ${this.opacity})`
+    return `rgba(43, 137, 181, ${this.opacity})`
   }
 
   fall() {

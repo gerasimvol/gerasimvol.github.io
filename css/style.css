@@ -10,7 +10,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 18px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Source Code Pro', monospace;
 }
 
 html,
@@ -67,78 +67,6 @@ main {
   margin: 0 auto;
 }
 
-.content__logo,
-.content__personal-info {
-  margin-bottom: 80px
-}
-
-.content__logo {
-  width: 40px;
-  height: 40px;
-}
-
-.logo {
-  cursor: pointer;
-}
-
-.logo:hover .logo__bg-parts {
-  transform: translateX(0);
-}
-
-.logo__bgs {
-  clip-path: url(#logo__mask);
-}
-
-.logo__bg-default {
-  width: 100%;
-  height: 100%;
-  fill: white;
-}
-
-.logo__bg-parts {
-  transform: translateX(100%);
-  transition: 0.4s;
-}
-
-.logo__bg-part {
-  width: 14.28%;
-  height: 100%;
-}
-
-.logo__bg-part_1 {
-  fill: #ff0402;
-}
-
-.logo__bg-part_2 {
-  transform: translateX(calc(14.28%));
-  fill: #ff8040;
-}
-
-.logo__bg-part_3 {
-  transform: translateX(calc(14.28% * 2));
-  fill: #ffff03;
-}
-
-.logo__bg-part_4 {
-  transform: translateX(calc(14.28% * 3));
-  fill: #03ff02;
-}
-
-.logo__bg-part_5 {
-  transform: translateX(calc(14.28% * 4));
-  fill: #0580ff;
-}
-
-.logo__bg-part_6 {
-  transform: translateX(calc(14.28% * 5));
-  fill: #010380;
-}
-
-.logo__bg-part_7 {
-  transform: translateX(calc(14.28% * 6));
-  fill: #800280;
-}
-
 svg {
   width: 100%;
   height: 100%;
@@ -152,8 +80,6 @@ svg {
 }
 
 .content__name {
-  line-height: 1.5;
-  text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 2px;
   color: white;
@@ -161,7 +87,7 @@ svg {
 
 .contact__label {
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   font-size: 0.9em;
   opacity: 0.7;
 }
@@ -215,6 +141,17 @@ svg {
   }
 }
 
+@media (max-width:375px) {
+  .link-icons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .link-icon {
+    margin-right: 0;
+  }
+}
+
 @media (max-width:768px) {
   main {
     min-height: auto;
@@ -222,13 +159,5 @@ svg {
 
   .content {
     padding: 20px 4.5vw;
-  }
-
-  .content__logo {
-    margin-bottom: 40px;
-  }
-
-  .content__personal-info {
-    margin-bottom: 40px;
   }
 }
