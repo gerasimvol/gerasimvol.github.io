@@ -5,6 +5,8 @@ const ctx = canvas.ctx
 const cW = canvas.canvas.width
 const cH = canvas.canvas.height
 
+const color = () => (Math.random() * (255 - 0) + 0)
+
 const dots = []
 class Dot {
   static gravity = 0.1
@@ -14,12 +16,15 @@ class Dot {
     this.y = y
     this.vx = Math.random() * 2
     this.vy = Math.random() * 2
-    this.radius = Math.random() * 2 + 2
+    this.radius = Math.random() * 5 + 3
     this.opacity = Math.random() + 0.5
+    this.colorR = color()
+    this.colorG = color()
+    this.colorB = color()
   }
 
   getColor () {
-    return `rgba(43, 137, 181, ${this.opacity})`
+    return `rgba(${this.colorR}, ${this.colorG}, ${this.colorB}, ${this.opacity})`
   }
 
   fall() {
