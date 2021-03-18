@@ -16,15 +16,12 @@ class Dot {
     this.y = y
     this.vx = Math.random() * 2
     this.vy = Math.random() * 2
-    this.radius = Math.random() * 5 + 3
-    this.opacity = Math.random() + 0.5
-    this.colorR = color()
-    this.colorG = color()
-    this.colorB = color()
+    this.radius = Math.random() * 2 + 1
+    this.opacity = Math.random() + 0.6
   }
 
   getColor () {
-    return `rgba(${this.colorR}, ${this.colorG}, ${this.colorB}, ${this.opacity})`
+    return `rgba(255, 89, 0, ${this.opacity})`
   }
 
   fall() {
