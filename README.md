@@ -1,4 +1,4 @@
 # gerasimvol.github.io
-[Gerasimenko Vladimir CV](https://gerasimvol.github.io/)
+[gerasimvol.github.io](https://gerasimvol.github.io/)
 
 
